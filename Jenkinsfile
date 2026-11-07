@@ -10,12 +10,6 @@ pipeline {
 
   stages {
 
-    stage('Checkout Source') {
-      steps {
-        git 'https://github.com/mal-naki/jenkins-deployment.git'
-      }
-    }
-
     stage('Build image') {
       steps{
         script {
