@@ -36,7 +36,7 @@ pipeline {
         withCredentials([file(credentialsId: 'minikube-kubeconfig', variable: 'KUBECONFIG')]) {
           sh 'kubectl apply -f deployment.yaml -f service.yaml'
           sh 'kubectl rollout restart deployment/deployment'
-          sh 'kubectl rollout status deployment/deployment --timeout=180s'
+          sh 'kubectl rollout status deployment/deployment'
         }
       }
     }
