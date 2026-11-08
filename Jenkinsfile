@@ -1,9 +1,9 @@
+def dockerImage
 
 pipeline {
 
   environment {
     dockerimagename = "malnakib01/react-app"
-    dockerImage = ""
   }
 
   agent any
@@ -20,7 +20,7 @@ pipeline {
 
     stage('Pushing Image') {
       environment {
-               registryCredential = 'dockerhub-credentials'
+               registryCredential = '13b98cb8-2a1d-488d-864e-f9ecb788f07e'
            }
       steps{
         script {
